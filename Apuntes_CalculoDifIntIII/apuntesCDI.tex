@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage[spanish, mexico]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{IEEEtrantools}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\pagestyle{headings}
+\begin{document}
+\title{Apuntes sobre Cálculo Diferencial e Integral III}
+\author{Elmer Ortega}
+\maketitle
+\noindent\section*{Un pequeño recordatorio sobre vectores}
+Se conoce a un \textbf{vector} como la conexión de $n$ números 
+reales. Se denota como $\vec{v}\in\mathbb{R}^n, \vec{v}=\left(v_1,v_2,v_3\dots,v_n\right)$. 
+Además, el conjunto $\mathbb{R}^n$ se define como $\mathbb{R}^n=\left\{a_1,a_2,a_3\dots,a_n | a_i\in\mathbb{R}\right\}$
+\newline
+\newline
+\textbf{Definición de la suma}\newline
+Sea $\vec{v}=\left(v_1,v_2,v_3\dots,v_n\right), \vec{u}=\left(u_1,u_2,u_3\dots,u_n\right)$, se define la suma de $\vec{v}+\vec{u}$ como:
+\begin{center}
+    $\vec{v}+\vec{u}=\left(v_1+u_1,v_2+u_2,\dots,v_i+u_i,\dots,v_n+u_n\right)$
+\end{center}
+\textbf{Definición del producto por un escalar}\newline
+Sea $\lambda\in\mathbb{R},\vec{v}=\left(v_1,v_2,v_3\dots,v_n\right)$, se define el producto de $\lambda*\vec{v}$ como
+\begin{center}
+    $\lambda*\vec{v}=\left(\lambda v_1, \lambda v_2+,\dots,\lambda v_i,\dots,\lambda v_n\right)$
+\end{center}
+Todos los $\mathbb{R}^n$ con estas definiciones son un \textbf{espacio vectorial}.
+\newline
+\textbf{La base canónica en $\mathbb{R}^n$}\newline
+Se define a la base canónica de $\mathbb{R}^n$ como el conjunto de:
+\begin{center}
+    $\vec{e}_1=\left(1,0,0\dots,0\right), \vec{e}_2=\left(0,1,0\dots,0\right), \dots, \vec{e}_n=\left(0,0,0\dots,1\right)$
+\end{center}
+En especial, la base canónica de $\mathbb{R}^2$ se define como $\left\{i=(1,0),j=(0,1)\right\}$ y $\mathbb{R}^3=\{i=(1,0,0), j=(0,1,0),k=(0,0,1)\}$
+Y, ¿por qué es útil? porque puedes pensar los vectores como: 
+$\left(a_1,a_2,a_3\dots,a_n\right)=a_1\vec{e}_1+a_2\vec{e}_2+\dots+a_n\vec{e}_n$ 
+que es un vector como la combinación lineal de la base canónica y es útil a la hora de diferenciar e integrar.
+\newpage
+\noindent\textbf{Definición de norma} \newline
+Sea el vector $\vec{v}\in\mathbb{R}^n, \vec{v}=(v_1,v_2,\dots,v_n)$, se define la norma de $\vec{v}$ como:\newline
+$\|\vec{v}\|=\sqrt{v_1^{2}+v_2^{2}+v_3^{2}+\dots+v_n^2}$, que es igual a la 
+\emph{distancia del punto al origen.} \newline
+\newline
+\textbf{Propiedades de la norma}
+\begin{enumerate}
+     \item $\|\vec{v}\|\geq0$
+     \item $\|\vec{v}\|=0 \Leftrightarrow \vec{v}=\vec{0}$
+     \item $\|\lambda\vec{v}\|=|\lambda|\|\vec{v}\|$
+     \item Desigualdad del triángulo: $\|\vec{u}+\vec{v}\|\leq \|\vec{u}\|+\|\vec{v}\|$, la igualdad se da 
+     $\Leftrightarrow\vec{u}=\lambda\vec{v},\text{ con }\lambda\geq0$
+\end{enumerate}
+
+\noindent\textbf{Definición de producto punto o producto interno} \newline
+Para  $\vec{u},\vec{v}\in\mathbb{R}^n$, se define el producto punto de $\vec{u}\cdot\vec{v}$ como:
+\begin{center}
+    $\vec{u}\cdot\vec{v}=u_1v_1+u_2v_2+\dots+u_nv_n$     
+\end{center}
+\textbf{Propiedades del producto punto}
+\begin{enumerate}
+     \item $\left(\vec{u}+\vec{v}\right)\cdot\vec{w} = \vec{u}\cdot\vec{w}+\vec{v}\cdot\vec{w}$
+     \item $\left(\lambda\vec{u}\right)\cdot\vec{v}=\lambda\left(\vec{u}\cdot\vec{v}\right)$
+     \item $\vec{u}\cot\vec{v}=\vec{v}\cot\vec{u}$
+     \item $\vec{u}\cdot\vec{u}\geq0$
+     \item $\vec{u}\cdot\vec{u}=0\Leftrightarrow\vec{u}=\vec{0}$
+     \item $\sqrt{\vec{u}\cdot\vec{u}} = \|\vec{u}\|$
+     \item $\cos{\theta}=\dfrac{\vec{u}\cdot\vec{v}}{\|\vec{u}\|}\|\vec{v}\|$, donde $\theta$ es el ángulo
+     entre $\vec{u}$ y $\vec{v}$
+     \newline
+     \textbf{Nota}: $\vec{u}\bot\vec{v}$ (son ortogonales) 
+     $\Leftrightarrow$ $\theta=90°=\dfrac{\pi}{2}^r\Leftrightarrow\vec{u}\cdot\vec{v}=0$
+\end{enumerate}
+\newpage
+\noindent\textbf{Representación paramétrica de la recta}
+\begin{center}
+    \includegraphics{Imagen1.png}
+\end{center}
+En general, dado $\vec{p}\in\mathbb{R}^n,\vec{d}\in\mathbb{R}^n, \vec{d}\not=\vec{0}, t\in\mathbb{R}$,
+\begin{center}
+    $\vec{v}=\vec{p}+t\vec{d}$ representa una línea recta en $\mathbb{R}^n$
+\end{center}
+\textbf{Representación de un hiper-plano}\newline
+En general, en $\mathbb{R}^n$, la ecuacion del hiper-plano está dada por,
+\begin{center}
+    $\left(\vec{v}-\vec{p}\right)\cdot\vec{n}=0$, que es un objeto de dimensión $\mathbb{R}^{n-1}$
+\end{center}
+Por ejemplo, en $\mathbb{R}^3$, con $\vec{n}=(n_1,n_2,n_3), \vec{p}=(p_1,p_2,p_3), \vec{v}=(x,y,z)$, se tiene que $n_1x+n_2y+n_3z-(n_1p_1+n_2p_2+n_3p_3)=0$, 
+por lo que, dado una ecuacion $Ax+By+Cz+F=0$, el vector $\vec{d}=(A,B,C)$ es perpendicular a los vectores $\vec{v}, \vec{p}$
+\begin{center}
+    \includegraphics{Imagen1.png}
+\end{center}
+Dado, $\vec{n}$ perpendicular a la recta $\vec{p}+t\vec{d}$, con $\vec{d}=\vec{v}-\vec{p} \Rightarrow \left(\vec{v}-\vec{p}\right)\cdot\vec{n}=0$
+
+\newpage
+\section{Funciones y diferenciación}
+\noindent$ \bullet$ Se conoce como funciones con valores escalares o campos escalares a las funciones del tipo $f: \mathbb{R}^n\rightarrow\mathbb{R}$\newline
+Por ejemplo, $f: \mathbb{R}^2\rightarrow\mathbb{R}, f(x,y)=3x^2+5xy+e^y$\newline
+\newline
+$ \bullet$ Se conoce como funciones con valores escalares o campos escalares a las funciones del tipo $f: \mathbb{R}^n\rightarrow\mathbb{R}$\newline
+Por ejemplo, $f: \mathbb{R}^2\rightarrow\mathbb{R}, f(x,y)=3x^2+5xy+e^y$\newline
+\newline
+\textbf{Definición:} Sea $f: \mathbb{R}^n\rightarrow\mathbb{R}$ la \textbf{gráfica} de $f$ es
+\begin{center}
+    $\left\{(x_1,x_2,x_3,\dots,x_n,f(x_1,x_2,x_3,\dots,x_n)):x_1,x_2,x_3,\dots,x_n\in\mathbb{R}\right\}$
+\end{center}
+\textbf{Definición:} Se define a las \textbf{curvas de nivel} de $f:\mathbb{R}^2\rightarrow\mathbb{R}$ como
+\begin{center}
+    $L_c:=\left\{(x,y)\in\mathbb{R}^2: f(x,y)=c\right\}$
+\end{center}
+\textbf{Definición:} Se define a las \textbf{superficies de nivel} de  $f: \mathbb{R}^3\rightarrow\mathbb{R}$ como
+\begin{center}
+    $L_c:=\left\{(x,y,z)\in\mathbb{R}^3: f(x,y,z)=c\right\}$
+\end{center}
+*Notas: La gráfica $f:\mathbb{R}^3\rightarrow\mathbb{R}$ es un objeto que vive en $\mathbb{R}^4$. En general,
+ la gráfica $f:\mathbb{R}^n\rightarrow\mathbb{R}$ es un objeto que vive en $\mathbb{R}^{n+1}$.\newline
+\textbf{Definición:} Se define al \textbf{conjunto de nivel} de  $f: \mathbb{R}^n\rightarrow\mathbb{R}$ como
+ \begin{center}
+     $L_c:=\left\{(x_1,x_2,\dots,x_n)\in\mathbb{R}^n: f(x_1,x_2,x_3,\dots,x_n)=c\right\}$
+ \end{center}
+\subsection*{Conjuntos abiertos y conjuntos cerrados}
+\noindent\textbf{Definición:} Dado $\vec{x}_0\in\mathbb{R}^n$ y $\epsilon>0$, la \textbf{bola (abierta)} es el conjunto
+ \begin{center}
+     $B_{\epsilon}(\vec{x}_0)=\left\{\vec{x}\in\mathbb{R}^n:\|\vec{x}-\vec{x}_0\|<\epsilon\right\}$\newline
+     Se le denota como la bola de radio $\epsilon$ centrada en $\vec{x}_0$
+ \end{center}
+ \textbf{Definición:} Dado un conjunto $A\subseteq\mathbb{R}^n$ es \textbf{abierto} si 
+ \begin{center}
+     $\forall \vec{x}_0\in A$,existe un $\epsilon > 0 $ tal que $B_\epsilon(\vec{x}_0)\subseteq A$ 
+ \end{center}
+ \textbf{Proposición:} La bola $B_\epsilon(\vec{x}_0)$ es abierta.\newline
+ \textbf{Pd.} $\forall B_\epsilon(\vec{y}_0)\subseteq B_\epsilon(\vec{x}_0)$. Sea $\vec{z}_0\in B_{\epsilon}(\vec{y}_0)$
+ \begin{center}
+    $\|\vec{z}_0-\vec{x}_0\| = \|\vec{z}_0+\vec{y}_0-\vec{y}_0-\vec{x}_0\|\leq \|\vec{z}_0-\vec{y}_0\|+\|\vec{y}_0-\vec{x}_0\|$ \newline
+    $\Rightarrow \|\vec{z}_0-\vec{y}_0\|+\|\vec{z}_0-\vec{x}_0\| < \epsilon - \|\vec{y}_0-\vec{x}_0\|=\epsilon$\newline
+    $\Rightarrow \vec{z}_0\in B_{\epsilon}(\vec{x}_0) \therefore \text{ la bola }  B_\epsilon(\vec{x}_0)$ es abierta.
+ \end{center}
+ \newpage
+ \noindent \textbf{Propiedades de los conjuntos abiertos}
+\begin{enumerate}
+    \item Si $V_1,V_2,V_3,\dots, V_n$  son conjuntos abiertos en $\mathbb{R}^n$, entonces $V_1\cup V_2\cup V_3\cup\dots V_n$ es abierto (Aplica para una union finita e infinita).
+    \item Si $V_1,V_2,V_3,\dots, V_n$  son conjuntos abiertos en $\mathbb{R}^n$, entonces $V_1\cap V_2\cap V_3 \cap \dots V_n$ es abierto (Solo para una intersección finita).
+    \item $\mathbb{R}^n$ es abierto.
+    \item $\emptyset$ es abierto. $\rightarrow$ argumento de vacuidad o vacío.
+\end{enumerate}
+\noindent\subsection*{Puntos frontera}
+\noindent \textbf{Definición: } Sea $A \in \mathbb{R}_n$. Un punto $\vec{x}_0 \in \mathbb{R}^n$ es un \textbf{punto frontera}
+de $A$ si todas las bolas abiertas centradas en $\vec{x}_0$ tienen en $A$ y puntos no en $A$. \newline \newline
+El conjunto de puntos frontera de $A$ se llama la \textbf{frontera de } $A$.\newline
+\textbf{Ejemplos de puntos fronteras:}
+
+\begin{center}
+    \begin{tabular}{| c | c |}
+    \hline
+    Conjunto $A$ & frontera de $A$ \\
+    \hline
+    $A=(-2,3)\subseteq\mathbb{R}$ & $\{-2,3\}$  \\
+    $A=[-2,3)\subseteq\mathbb{R}$ & $\{-2,3\}$  \\
+    $A=(-2,3)\cup\{ 6 \}\subseteq\mathbb{R}$ & $\{-2,3,6\}$  \\
+    $A=(-2,3)\cup[3,6)\subseteq\mathbb{R}$ & $\{-2,6\}$  \\
+    $A=(-2,3)\cup(3,6]\subseteq\mathbb{R}$ & $\{-2,3,6\}$  \\
+    $A=\{x\in\mathbb{Q} : 0\geq x \geq 1\}$ & $[0,1]$ \\
+    $A=\{(x,y)\in\mathbb{R}^2:x^2+y^2<1\}$ & $\{(x,y)\in\mathbb{R}^2:x^2+y^2=1\}$ \\
+    $A$ es un finito& El mismo conjunto $A$\\
+    $A=\left\{n+\dfrac{1}{n}:n\in\mathbb{N}\right\}=\left\{2,1+\dfrac{1}{2},\dots\right\}$ & $A\cup \{1\}$\\
+    $A=\mathbb{R}^n$ & $\emptyset$\\
+    $A=\emptyset$ & $\emptyset$\\
+    \hline
+    \end{tabular}
+    \end{center}
+
+\end{document}
