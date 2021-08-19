@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage[spanish, mexico]{babel}
+
+\usepackage{dsfont}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{IEEEtrantools}
+\usepackage{caption}
+\usepackage{listings}
+
+\begin{document}
+\title{Apuntes sobre Álgebra Superior II}
+\author{Elmer Ortega}
+\maketitle
+\section*{El campo de los complejos}
+%¿Qué es un \textbf{Anillo}?
+Un conjunto $A$ con las operaciones definidas suma ($+$) y producto ($\bullet$)
+\begin{center}
+    $\langle A, +, \bullet \rangle$
+\end{center}
+se llama \textbf{Anillo} si cumple las siguientes 8 propiedades:
+\begin{enumerate}
+    \item \textbf{La suma cierra}  (cerradura) : 
+    \begin{center}
+        $\forall a,b \in A,  a+b\in A$
+    \end{center}
+    \item \textbf{El producto cierra}  (cerradura) : 
+    \begin{center}
+        $\forall a,b \in A,  a \bullet b\in A$
+    \end{center}
+    \item \textbf{Neutro aditivo} : 
+    \begin{center}
+        $\exists{ } 0 \in A$ \text{tal que} $\forall a \in A, a+(0)=(0)+a=a$
+    \end{center}
+    \item \textbf{Inverso aditivo} : 
+    \begin{center}
+        $\exists -a \in A$ \text{tal que} $\forall a \in A, a+(-a)=(-a)+a=0$
+    \end{center}
+    \item \textbf{Comutatividad de la suma} : 
+    \begin{center}
+        $\forall a,b \in A,  a+b=b+a$
+    \end{center}
+    \item \textbf{Asociatividad de la suma} : 
+    \begin{center}
+        $\forall a,b,c \in A, (a+b)+c=a+(b+c)$
+    \end{center}
+    \item \textbf{Asociatividad del producto} : 
+    \begin{center}
+        $\forall a,b,c \in A, (a\bullet b)\bullet c = a \bullet (b \bullet c)$
+    \end{center}
+    \newpage
+    \item \textbf{Distributividad$\dots$} \newline 
+        $\forall a,b,c \in A,$
+        \begin{itemize}
+            \item \textbf{por la izquierda:} $a\bullet( b + c) = ab+ac$
+            \item \textbf{por la derecha:}  $( b + c)\bullet a = ba+ca$
+        \end{itemize}
+    Si se cumple la siguiente condición, entonces el anillo $\langle A,+,\bullet\rangle$ se llamará \textquotedblleft Anillo con 1\textquotedblright.
+    \item \textbf{Neutro multiplicativo}
+    \begin{center}
+        $\exists{} 1, \forall a \in A, 1a=a1=a$
+    \end{center}
+    Si se cumple la condición de \textbf{producto conmutativo} el anillo $\langle  A,+,\bullet \rangle$ se llamará \textquotedblleft anillo conmutativo \textquotedblright. 
+    \begin{center}
+        $\forall a,b\in A, a\bullet b = b \bullet a$
+    \end{center}
+     \textbf{Ejemplo:} $\langle  \mathds{Z}, +, \bullet \rangle$ es un \textquotedblleft anillo conmutativo con 1 \textquotedblright.
+
+    \textbf{Def.} Un campo $\langle K, +, \bullet \rangle$ es un anillo conmutativo con 1 que además cumple:
+    \item \textbf{Existencia del inverso multiplicativo}:
+    \begin{center}
+        $\forall a \in A, a\not = 0, \exists a^{-1}\in A \text{ tal que } a\bullet a^{-1}=a^{-1}\bullet a =1$
+    \end{center}
+    \textbf{Ejemplo:} $\langle \mathds{Q}, +, \bullet \rangle$ es un anillo conmutativo con 1 en el que, además, si \newline
+    \begin{center}
+    $\forall\dfrac{a}{b}\in\mathds{Q}$ \^{} $ a\not=0 ,\exists \dfrac{b}{a} \in \mathds{Q}$ \^{} $\left( \dfrac{a}{b} \right)\left( \dfrac{b}{a} \right)=1$
+    \end{center}
+    entonces $\langle \mathds{Q}, +, \bullet \rangle$ es un campo.
+\end{enumerate}
+\newpage
+\subsection*{¿Cómo surge los números $\mathds{C}$omplejos?}
+Al comenzar a contar es obvio que comenzaremos con los más natural:
+los números $\mathds{N}$aturales $\left\{1,2,3 \dots \right\} $, aunque surgió el grande enemigo de 
+este conjunto la ecuación: $x+4=0$. La ecuación anterior nos obliga crear otro conjunto $\mathds{Z} = \left\{\dots-2,-1,0,1,2\dots\right\}$.
+
+\end{document}
