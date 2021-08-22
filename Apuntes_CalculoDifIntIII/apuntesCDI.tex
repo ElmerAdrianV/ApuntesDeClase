@@ -78,7 +78,7 @@ Para  $\vec{u},\vec{v}\in\mathbb{R}^n$, se define el producto punto de $\vec{u}\
 \newpage
 \noindent\textbf{Representación paramétrica de la recta}
 \begin{center}
-    \includegraphics{Imagen1.png}
+    \includegraphics{formaVec.png}
 \end{center}
 En general, dado $\vec{p}\in\mathbb{R}^n,\vec{d}\in\mathbb{R}^n, \vec{d}\not=\vec{0}, t\in\mathbb{R}$,
 \begin{center}
@@ -91,10 +91,7 @@ En general, en $\mathbb{R}^n$, la ecuacion del hiper-plano está dada por,
 \end{center}
 Por ejemplo, en $\mathbb{R}^3$, con $\vec{n}=(n_1,n_2,n_3), \vec{p}=(p_1,p_2,p_3), \vec{v}=(x,y,z)$, se tiene que $n_1x+n_2y+n_3z-(n_1p_1+n_2p_2+n_3p_3)=0$, 
 por lo que, dado una ecuacion $Ax+By+Cz+F=0$, el vector $\vec{d}=(A,B,C)$ es perpendicular a los vectores $\vec{v}, \vec{p}$
-\begin{center}
-    \includegraphics{Imagen1.png}
-\end{center}
-Dado, $\vec{n}$ perpendicular a la recta $\vec{p}+t\vec{d}$, con $\vec{d}=\vec{v}-\vec{p} \Rightarrow \left(\vec{v}-\vec{p}\right)\cdot\vec{n}=0$
+
 
 \newpage
 \section{Funciones y diferenciación}
@@ -163,7 +160,7 @@ El conjunto de puntos frontera de $A$ se llama la \textbf{frontera de } $A$.\new
     $A=(-2,3)\cup\{ 6 \}\subseteq\mathbb{R}$ & $\{-2,3,6\}$  \\
     $A=(-2,3)\cup[3,6)\subseteq\mathbb{R}$ & $\{-2,6\}$  \\
     $A=(-2,3)\cup(3,6]\subseteq\mathbb{R}$ & $\{-2,3,6\}$  \\
-    $A=\{x\in\mathbb{Q} : 0\geq x \geq 1\}$ & $[0,1]$ \\
+    $A=\{x\in\mathbb{Q} : 0\leq x \leq 1\}$ & $[0,1]$ \\
     $A=\{(x,y)\in\mathbb{R}^2:x^2+y^2<1\}$ & $\{(x,y)\in\mathbb{R}^2:x^2+y^2=1\}$ \\
     $A$ es un finito& El mismo conjunto $A$\\
     $A=\left\{n+\dfrac{1}{n}:n\in\mathbb{N}\right\}=\left\{2,1+\dfrac{1}{2},\dots\right\}$ & $A\cup \{1\}$\\
@@ -186,6 +183,21 @@ El conjunto de puntos frontera de $A$ se llama la \textbf{frontera de } $A$.\new
 \noindent\textbf{*Nota: }La frontera de $A$ y $A^c$ es el mismo conjunto. \newline
 \noindent\textbf{*Nota: }Si $A$ es un conjunto finito de $\mathbb{R}^n$, entoces $A$ es cerrado y no abierto.\newline
 \noindent\textbf{*Nota:}\"{}Entre 2 números racionales, hay un irracional y hay un racional entre 2 números irracionales\"{}.\newline
+\begin{center}
+    \begin{tabular}{| c | c |}
+    \hline
+    Conjunto $A$ & Características de $A$ \\
+    \hline
+    $A=\{(x,y)\subseteq\mathbb{R}^2:y\leq x^2\}$ & Pensando en $y=x^2\rightarrow A^c$ es abierto $\therefore A$ es cerrrado  \\
+    $A={(1,1,1)}\subseteq\mathbb{R}^3$ & $A$ es cerrado  \\
+    $A=[2,5]\subseteq\mathbb{R}$ & Como $A^c=(-\infty,2)\cup(5\,\infty)$ es abierto $\therefore A$ es cerrado  \\
+    $A=[2,5)\subseteq\mathbb{R}$ & A  es no abierto y no cerrado   \\
+    $A=[2,\infty)\subseteq\mathbb{R}$ & Como $A^c=(-\infty,2)$ es abierto, A es cerrado  \\
+    $A=\{x\in\mathbb{Q} : 0\leq x \leq 1\}$ & $A$ es no abierto, no cerrado\\
+    $A=\left\{1+\dfrac{1}{n}:n\in\mathbb{N}\right\}$ & $A$ es no abierto, no cerrado \\
+    \hline
+    \end{tabular}
+    \end{center}
 \newpage
 \section*{Límites}
 \noindent\textbf{Definición de límite:} Sea $f:A\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m$ con $A$ abierto y 
