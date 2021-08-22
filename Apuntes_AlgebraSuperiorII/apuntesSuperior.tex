@@ -7,6 +7,8 @@
 \usepackage{IEEEtrantools}
 \usepackage{caption}
 \usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
 \pagestyle{headings}
 \begin{document}
 \title{Apuntes sobre Álgebra Superior II}
@@ -146,4 +148,29 @@ Sea $z=a+bi,w\in\mathbb{C}$
     \item $Re(z)=\dfrac{z+\bar{z}}{2}$
     \item $Im(z)=\dfrac{z-\bar{z}}{2i}$
 \end{enumerate}
+\subsection*{Representación geométrica y polar de los $\mathbb{C}$ omplejos}
+\noindent\textbf{Representación geométrica en $\mathbb{R}^2$}
+\begin{center}
+    \includegraphics{imaginariosGeo.png}
+\end{center}
+\noindent\textbf{Representación polar en $\mathbb{R}^2$}
+\begin{center}
+    \includegraphics{imaginariosGeo1.png}
+\end{center}
+\newpage
+\subsection*{Conversión de las representaciones}
+\noindent\textbf{Pasar a forma geométrica a polar}
+\begin{center}
+    $\|z\|=\sqrt{a^2+b^2}$, $\theta=\arctan{\left(\dfrac{b}{a}\right)}$    
+\end{center}
+\begin{center}
+    $z=\|z\|(\cos{\theta}+i\sin{\theta})$
+\end{center}
+\textbf{Pasar a forma polar a geométrica}
+\begin{center}
+    $a=\|z\|\cos{\theta}$, $b=\|z\|\sin{\theta}$
+\end{center}
+\begin{center}
+    $z=a+bi$
+\end{center}
 \end{document}
