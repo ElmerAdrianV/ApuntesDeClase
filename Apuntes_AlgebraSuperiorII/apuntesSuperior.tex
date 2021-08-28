@@ -132,13 +132,14 @@ $\bullet \textbf{ el inverso multiplicativo} $ como:\newline
 Sea $w=a+bi \Rightarrow w^{-1}=\dfrac{a}{a^2+b^2}+\dfrac{-b}{a^2+b^2}i\text{ con } a$ y $b\not=0$\newline
 Corroborando las 10 preposiciones mencionadas antes podemos comprobar que $\langle\mathbb{C}, +,\cdot\rangle$ es un \textbf{campo}.\newline
 *\textbf{Nota importante: } $\mathbb{C}$ no es un campo ordenada, es decir, no tiene sentido la comparación
-de $z_1,z_2\in \mathbb{C}$ tal que $z_1 < z_2$\newline
+de $z_1,z_2\in \mathbb{C}$ tal que $z_1 < z_2$
 \subsection*{Conjugado de $z$}
 \noindent \textbf{Definición: }Para cada $z\in\mathbb{C}, z=a+bi$, entonces se denomina
 \textbf{conjugado de }$z$ a $a-bi$ y se denota $\bar{z}$
 \newline
-\subsection*{Propiedades del conjugado de un complejo}
-Sea $z=a+bi,w\in\mathbb{C}$
+\newline
+\textbf{Propiedades del conjugado de un complejo:}\newline
+\noindent Sea $z=a+bi,w\in\mathbb{C}$
 \begin{enumerate}
     \item $z \cdot \bar{z}=a^2+b^2$
     \item $\bar{z+w}=\bar{z}+\bar{w}$
@@ -148,6 +149,7 @@ Sea $z=a+bi,w\in\mathbb{C}$
     \item $Re(z)=\dfrac{z+\bar{z}}{2}$
     \item $Im(z)=\dfrac{z-\bar{z}}{2i}$
 \end{enumerate}
+\newpage
 \subsection*{Representación geométrica y polar de los $\mathbb{C}$ omplejos}
 \noindent\textbf{Representación geométrica en $\mathbb{R}^2$}
 \begin{center}
@@ -174,15 +176,19 @@ Sea $z=a+bi,w\in\mathbb{C}$
 \begin{center}
     $z=a+bi$
 \end{center}
-\subsection*{Formula de Euler}
-\begin{center}
-    $z=|z|e^{i\theta}\Rightarrow e^{i\theta}=\cos{\theta}+i\sin{\theta}$\newline
-    Si $\theta=\pi\Rightarrow e^{i\pi}=-1+0\Rightarrow e^{i\pi}+1=0$, que se conoce como la formula de euler.
-\end{center}
-\subsection*{Formula de Euler}
+\subsection*{Formula de Euler y De Moivre}
+\noindent Sea $z\in\mathbb{C}$, se tiene que $z=|z|e^{i\theta}\Rightarrow e^{i\theta}=\cos{\theta}+i\sin{\theta}$. En especial, si $\theta=\pi\Rightarrow e^{i\pi}=-1+0\Rightarrow e^{i\pi}+1=0$, que se conoce como \textbf{la formula de euler}.
+\newline
+\newline
+\textbf{Para potencias n-ésimas...}\newline
 \noindent Si $z=|z|(\cos{\theta}+i\sin{\theta})$
 \begin{center}
-    $\Rightarrow z^n=|z|^n(\cos{n\theta}+i\sin{n\theta})$
+    $\Rightarrow z^n=|z|^n(\cos{n\theta}+i\sin{n\theta})$, que se conoce como la \textbf{formula de De Moivre}.
 \end{center}
-
+\noindent \textbf{Para sacar raíces n-ésimas...}\newline
+\noindent Si $z=|z|(\cos{\theta}+i\sin{\theta})$
+\begin{center}
+    $\Rightarrow \sqrt[n]{z}=\sqrt[n]{|z|}\left(\cos{\dfrac{\theta+2\pi k}{n}}+i\sin{\dfrac{\theta+2\pi k}{n}}\right), \forall k=1,2,3,\dots,n-1$, que se conoce como la \textbf{formula de De Moivre}. Notesé que
+    cada complejo $z$ tiene $n$ raíces énesimas.
+\end{center}
 \end{document}
