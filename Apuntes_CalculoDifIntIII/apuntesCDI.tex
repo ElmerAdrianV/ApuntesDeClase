@@ -208,7 +208,8 @@ Decimos que
 \end{center}
 \noindent Si $\forall \epsilon>0, \exists \delta >0 $ tq si $\vec{x}\in A$ y $\|\vec{x}-\vec{a}\| < \delta \Rightarrow  \|f(\vec{x})-\vec{b}\| < \epsilon$.\newline
 Para mostrar que un límite no existe es necesario mostrar dos trayectorias (ecuaciones) tales que el limite sea diferente en ellas.
-
+\newline
+\newline
 \textbf{Propiedades de los límites: }\newline
 \noindent Sea $f\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m, g\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m$ y sea $\vec{a}\in A$ o en la frontera de $A$.
 \begin{enumerate}
@@ -259,9 +260,36 @@ $\vec{a}$ si
 combinación lineal de productos de potencias no negativas de $x_i\in\mathbb{R}^n$ con $i=1,2,3\dots,n$.\newline
 
 \noindent\textbf{Teorema (semi-formal):} Si $f(\vec{x})$ es un polinomio entonces $f$ es \emph{continua } para todo $\vec{a}$.\newline
-
-\noindent\textbf{Teorema (semi-formal):} Si $f(\vec{x})$ es una \emph{función racional}, es decir, (con cociente de polinomios)
-entonces $f$ es \emph{continua en } $\vec{a}$ si el denominador de $f(\vec{x})$ no es $0$ en $\vec{a}$.
-
-
+\newline
+\noindent\textbf{Teorema (semi-formal):} Si $f(\vec{x})$ es una \emph{función racional}, es decir, cociente de polinomios
+entonces $f$ es \emph{continua en} $\vec{a}$ si el denominador de $f(\vec{x})\not=0$ en $\vec{a}$.\newline
+\newline
+\newpage
+\textbf{Composición de funciones}\newline
+\textbf{Teorema: }Si $g:A\subseteq\mathbb{R}^n\rightarrow \mathbb{R}^m$ y $f:b\subseteq\mathbb{R}^m\rightarrow \mathbb{R}^p$ y 
+$f(A)\subseteq B$ y $f$ es continua en $\vec{a}$ y$g$ es continua en $f(\vec{a})\Longrightarrow$ 
+\begin{center}
+    $g\circ f$ es \emph{continua} en $\vec{a}$
+\end{center}
+\noindent \textbf{Observación} Una funcion $f$ es \emph{continua} en un conjunto $A$ si es continua en cada vector $\vec{a}$.
+\newpage
+\subsection*{Derivadas}
+\noindent \textbf{Definición:} Se define como \emph{derivada parcial de $f$ con respecto a $x$ en $(a,b)$}
+\begin{center}
+    $\dfrac{\partial f}{\partial x}{(a,b)}:=\lim_{h\rightarrow0}{\dfrac{f(a+h,b)-f(a,b)}{h}}$
+\end{center}
+\noindent \textbf{Definición:} Se define como \emph{derivada parcial de $f$ con respecto a $y$ en $(a,b)$}
+\begin{center}
+    $\dfrac{\partial f}{\partial x}{(a,b)}:=\lim_{k\rightarrow0}{\dfrac{f(a,b+k)-f(a,b)}{k}}$
+\end{center}
+\noindent En general, sea $f:u\subseteq\mathbb{R}^n\rightarrow \mathbb{R}$ con $u$ abierto, 
+se define a la \emph{derivada parcial en dirección de $x_i$}: 
+\begin{center}
+    $\dfrac{\partial f}{\partial x_i}{(a_1,a_2,\dots,a_n)}:=\lim_{h\rightarrow0}{\dfrac{f(a_1,a_2,\dots,x_i+h ,\dots,a_n)-f(a_1,a_2,\dots,a_n)}{h}}$
+    \indent $=\lim_{h\rightarrow0}{\dfrac{f(\vec{a}+h\vec{e_i})-f(\vec{a})}{h}}$
+\end{center}
+\noindent \textbf{Notación: }
+\begin{center}
+    $\dfrac{\partial f}{\partial x_i}$, $\dfrac{\partial f}{\partial x_i}|_{\vec{x}=\vec{a}}$, $f_{(x_i)}(\vec{a})$, $D_{x_i}f(\vec{a})$
+\end{center}
 \end{document}
