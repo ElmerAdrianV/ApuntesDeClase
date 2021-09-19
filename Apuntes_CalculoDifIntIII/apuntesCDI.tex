@@ -265,7 +265,7 @@ combinación lineal de productos de potencias no negativas de $x_i\in\mathbb{R}^
 entonces $f$ es \emph{continua en} $\vec{a}$ si el denominador de $f(\vec{x})\not=0$ en $\vec{a}$.\newline
 \newline
 \newpage
-\textbf{Composición de funciones}\newline
+\noindent\textbf{Composición de funciones}\newline
 \textbf{Teorema: }Si $g:A\subseteq\mathbb{R}^n\rightarrow \mathbb{R}^m$ y $f:b\subseteq\mathbb{R}^m\rightarrow \mathbb{R}^p$ y 
 $f(A)\subseteq B$ y $f$ es continua en $\vec{a}$ y$g$ es continua en $f(\vec{a})\Longrightarrow$ 
 \begin{center}
@@ -305,6 +305,7 @@ existen y
 
 \noindent Solamente diremos que \textbf{existe} el plano tangente en $(x_0,y_0)$ si $f$ es diferenciable en $(x_0,y_0)$
 \newline
+\newpage
 \noindent \textbf{Definición:} El \textbf{gradiente de }$f$ es el vector
 \begin{center}
     $\nabla f(x_0,y_0)=\left(\dfrac{\partial f(x_0,y_0)}{\partial x},\dfrac{\partial f(x_0,y_0)}{\partial y} \right)$
@@ -313,7 +314,108 @@ existen y
 
 Entonces la definición de \textbf{diferenciabilidad} se puede leer como el gradiente existe:
 \begin{center}
-    ${\lim_{(x,y)\rightarrow(x_0,y_0)}{\dfrac{f(x,y)-\left(f(x_0,y_0)-\nabla f(x_0,y_0)\right)\cdot\left(x-x_0,y-y_0\right)}{\|(x,y)-(x_0,y_0)\|}}=0}$
+    ${\lim_{(x,y)\rightarrow(x_0,y_0)}{\dfrac{f(x,y)-f(x_0,y_0)-\left(\nabla f(x_0,y_0)\right)\cdot\left(x-x_0,y-y_0\right)}{\|(x,y)-(x_0,y_0)\|}}=0}$
 \end{center}
+
+\noindent \textbf{Definición: }El gradiente de una función $f\subseteq\mathbb{R}^n\rightarrow\mathbb{R}$, con $A$ abierto, es:
+\begin{center}
+    $\nabla{f(\vec{x_0})}:=\left(\dfrac{\partial f(x_0,y_0)}{\partial x_1},\dfrac{\partial f(x_0,y_0)}{\partial x_2},\dots,\dfrac{\partial f(x_0,y_0)}{\partial x_n}\right)$
+\end{center}
+
+\noindent \textbf{Definición: } Sea $f\subseteq\mathbb{R}^n\rightarrow\mathbb{R}$. Decimos que $f$ es \emph{diferenciable} en un 
+punto $\vec{x_0}\in A$ si $\dfrac{\partial f}{\partial x_i}(\vec{x_0})$ existen $\forall i=1,2,\dots,n$ y 
+\begin{center}
+    ${\lim_{(\vec{x})\rightarrow(\vec{x_0})}{\dfrac{f(\vec{x})-f(\vec{x_0})-\left(\nabla f(\vec{x_0})\right)\cdot\left(\vec{x}-\vec{x_0}\right)}{\|\vec{x}-\vec{x_0}\|}}=0}$
+\end{center}
+\noindent Mientras mas cerca este $\vec{x}$ de $\vec{x_0}$ mejor será la aproximación, ya que, el límite indica que la diferencia entre
+el plano y la gráfica es mejor que la diferencia entre $\vec{x}$ y $\vec{x_0}$. Entonces, solo y solo en este caso decimos que $T(\vec{x})= f(\vec{x_0})+\left(\nabla f(\vec{x_0})\right)\cdot\left(\vec{x}-\vec{x_0}\right)$
+es el plano tangente de $\vec{x_0}$. Así, aunque las  $\dfrac{\partial{f}}{\partial{x_i}}{(\vec{x_0})}$ existan es solo una razón necesaria más no suficiente.
+
+\newpage
+\noindent \textbf{Definición: } Sea $f:A\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m$ y $\vec{x_0}\in A$ con $A$ abierto. 
+Supongamos que $f(f_1,f_2, \dots, f_m)$. Si $\dfrac{\partial{f_i}}{\partial{x_j}}{(\vec{x_0})}$ existe, denotamos
+\begin{center}
+    \begin{equation}\notag
+        Df(\vec{x_0})=
+        \begin{pmatrix}
+        \dfrac{\partial{f_1}}{\partial{x_1}}{(\vec{x_0})} & \dfrac{\partial{f_1}}{\partial{x_2}}{(\vec{x_0})}& \cdots & \dfrac{\partial{f_1}}{\partial{x_n}}{(\vec{x_0})}\\
+        \dfrac{\partial{f_2}}{\partial{x_1}}{(\vec{x_0})} & \dfrac{\partial{f_2}}{\partial{x_2}}{(\vec{x_0})} & \cdots & \dfrac{\partial{f_2}}{\partial{x_n}}{(\vec{x_0})}\\
+        \vdots & \vdots & \ddots & \vdots\\
+        \dfrac{\partial{f_m}}{\partial{x_1}}{(\vec{x_0})} & \dfrac{\partial{f_m}}{\partial{x_2}}{(\vec{x_0})}& \cdots & \dfrac{\partial{f_m}}{\partial{x_n}}{(\vec{x_0})}
+        \end{pmatrix}
+        \end{equation}
+\end{center}
+\noindent A esta matriz se conoce como la \textbf{matriz jacobiana de $f$ (en $\vec{x_0}$)} y es de tamaño $m\times n$
+
+\noindent \textbf{Definición: }Sea $f:A\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m$ y $\vec{x_0}\in A$ con $A$ abierto. Decimos que 
+$f$ es \emph{diferenciable en} $\vec{x_0}$ si $\dfrac{\partial{f_i}}{\partial{x_m}}{(\vec{x_0})}$ existen $\forall i,j$ y 
+\begin{center}
+    ${\lim_{(\vec{x})\rightarrow(\vec{x_0})}{\dfrac{f(\vec{x})-f(\vec{x_0})-\left(Df(\vec{x_0})\right)\cdot\left(\vec{x}-\vec{x_0}\right)}{\|\vec{x}-\vec{x_0}\|}}=0}$
+\end{center}
+\noindent Si el $lim\not=0$ $T(\vec{x_0})=f(\vec{x_0})+ Df(\vec{x_0})\cdot (\vec{x}-\vec{x_0})$ no se interpreta como un plano tangente.
+
+\noindent \textbf{Teorema: }Sea $f:A\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m$ y $\vec{x_0}\in A$ con $A$ abierto. Si $f$ es diferenciable en $\vec{x_0}$, entonces
+\begin{center}
+    $f$ es continua en $\vec{x_0}$
+\end{center}
+
+\noindent \textbf{Nota: }Es posible que las derivadas parciales existan pero la función no sea continua.
+
+\noindent \textbf{Teorema: }Sea $f:A\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m$ y $\vec{x_0}\in A$ con $A$ abierto. Si $f$ es diferenciable en $\vec{x_0}$, supongamos que 
+$\dfrac{\partial{f_i}}{\partial{x_j}}$ existe y es continua en $B_{r}(\vec{x_0})$, para algun $r>0$ y $\forall i,j$, entonces $f$ es \emph{diferenciable en} $\vec{x_0}$
+
+\noindent \textbf{Notación: }Sea $f:A\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m$ con $A$ abierto, decimos que $f$ es de clase $C^{1}$ en $A$ si $\dfrac{\partial{f_i}}{\partial{x_j}}$ existen y son continuas en $A$.\newline
+
+\subsection*{Trayectorias} 
+
+\noindent \textbf{Definción: }Una función $f:I\subseteq\mathbb{R}\rightarrow \mathbb{R}^n$ (usualmente  $f$ es continua) es un \textbf{trayectoria}. Usualmente, a los compenentes de $f$ las llamamos
+$X_i(t)$; i,e,
+\begin{center}
+    $f(t)=(X_1 (t),X_2 (t),\dots,X_n (t))$
+\end{center}
+\noindent donde $t$ se le conoce como parametro y la imagen de $f$ le llamamos la curva. 
+
+\noindent Pensando en la curva de f, tendremos un vector $c'(t_0)$ que es el vector de velocidad instantánea. Y
+$\|c'(t_0)\|$ es la rapidez de la curva en $t_0$
+
+\noindent \textbf{Definición:} Si $C:\mathbb{R}\rightarrow\mathbb{R}^n$ es una trayectoria y $c'(t_0)$ existe, entonces
+\begin{center}
+    $U(t)=c(t_0)+tc'(t_0)$
+\end{center}
+es la ecuacion de la recta con posición inicial $c(t_0)$ y vector de dirección $c'(t_0)$
+
+\subsection*{Proposiciones de derivadas} 
+\noindent \textbf{Proposición:} Sea $f:A\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m$ con $A$ abierto y $\vec{x_0}\in A$. Si $f$ es diferenciable en 
+$\vec{x_0}$ y $c\in\mathbb{R}$ entonces $cf$ es diferenciable en $\vec{x_0}$ y 
+\begin{center}
+    $D(cf)(\vec{x_0})=cD(f)(\vec{x_0})$
+\end{center}
+
+\noindent \textbf{Proposición:} Sean $f,g:A\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m$ con $A$ abierto y $\vec{x_0}\in A$. Si $f$ y $g$ son diferenciable en 
+$\vec{x_0}$ entonces $f+g$ es diferenciable en $\vec{x_0}$ y 
+\begin{center}
+    $D(f+g)(\vec{x_0})=Df(\vec{x_0})+Dg(\vec{x_0})$
+\end{center}
+
+\noindent \textbf{Proposición: }Además, si $m=1$, $f\circ g$ es diferenciable en $\vec{x_0}$, y 
+\begin{center}
+    $D(f\cdot g)(\vec{x_0})=f(\vec{x_0})Dg(\vec{x_0})+g(\vec{x_0})Df(\vec{x_0})$
+\end{center}
+
+\noindent \textbf{Proposición:} Sean $f,g:A\subseteq\mathbb{R}^n\rightarrow\mathbb{R}$ con $A$ abierto y $\vec{x_0}\in A$. Si $f$ y $g\not=0$ son diferenciable en 
+$\vec{x_0}$ entonces $\dfrac{f}{g}$ es diferenciable en $\vec{x_0}$ y 
+\begin{center}
+    $D(\dfrac{f}{g})(\vec{x_0})=\dfrac{g(\vec{x_0})Df(\vec{x_0})-f(\vec{x_0})Dg(\vec{x_0})}{(g{\vec{x_0}})^2}$
+\end{center}
+
+\noindent \textbf{Teorema (Regla de la cadena):} Sean $g:\subseteq\mathbb{R}^n\rightarrow\mathbb{R}^m$ y $f:\subseteq\mathbb{R}^m\rightarrow\mathbb{R}^p$.
+Si $g$ es diferenciable en $\vec{x_0}\in \mathbb{R}^n$ y $f$ es diferenciable en $g(\vec{x_0})$ y entonces
+$f\circ g:\mathbb{R}^n\rightarrow\mathbb{R}^p$ es diferenciable en $\vec{x_0}$ y
+\begin{center}
+    $D(f\circ g)(\vec{x_0})=Df(g(\vec{x_0}))Dg(\vec{x_0})$
+\end{center}
+
+
+
 
 \end{document}
